@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Caching;
-using MyShop.Core;
 using MyShop.Core.Models;
 
 namespace MyShop.DataAccess.InMemory
@@ -25,7 +24,7 @@ namespace MyShop.DataAccess.InMemory
         }
         public void Commit()
         {
-            cache["Products"] = products;
+            cache["products"] = products;
         }
         public void Insert(Product p)
         {
